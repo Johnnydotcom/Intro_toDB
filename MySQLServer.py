@@ -18,8 +18,8 @@ try :
     """)
 
     print("Database 'alx_book_store' created successfully!")
-except Exception:
-    mysql.connector.Error
+except mysql.connector.Error:
+    print("Failed to connect to database")
 finally :
     mycursor.close()
     mydb.close()
